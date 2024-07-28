@@ -19,6 +19,15 @@
   recognizable: true
 
 - type: reagent
+  id: Cheesesauce
+  name: reagent-name-cheesesauce
+  group: Foods
+  desc: reagent-desc-cheesesauce
+  physicalDesc: reagent-physical-desc-creamy
+  flavor: cheesy
+  color: "#e29434"
+  recognizable: true
+- type: reagent
   id: Cornoil
   name: reagent-name-cornoil
   group: Foods

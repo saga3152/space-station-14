@@ -120,6 +120,26 @@
 
 - type: entity
   parent: BaseFoodCondimentPacket
+  id: FoodCondimentPacketCheesesauce
+  name: Cheese sauce
+  description: You can make anything cheesy now.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Cheesesauce
+          Quantity: 10
+  - type: Icon
+    state: packet-cheesesauce
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: packet-trans-
+
+- type: entity
+  parent: BaseFoodCondimentPacket
   id: FoodCondimentPacketCornoil
   name: corn oil
   description: Corn oil. A delicious oil used in cooking. Made from corn.

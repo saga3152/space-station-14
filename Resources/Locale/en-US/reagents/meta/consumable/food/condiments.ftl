@@ -4,6 +4,9 @@ reagent-desc-astrotame = The sweetness of a thousand sugars but none of the calo
 reagent-name-bbq-sauce = BBQ sauce
 reagent-desc-bbq-sauce = Hand wipes not included.
 
+reagent-name-cheesesauce = cheese sauce
+reagent-desc-cheesesauce = Basically a cheese, but in a bit more liquid form.
+
 reagent-name-cornoil = corn oil
 reagent-desc-cornoil = Corn oil, A delicious oil used in cooking. Made from corn.
 
