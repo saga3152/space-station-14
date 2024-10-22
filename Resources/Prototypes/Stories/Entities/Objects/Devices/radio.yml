@@ -16,3 +16,60 @@
   - type: Item
     sprite: Objects/Devices/communication.rsi
     heldPrefix: radio
+
+- type: entity
+  name: advanced radio
+  description: A radio able to access multiple channels
+  parent: RadioHandheld
+  id: RadioAdvanced
+  components:
+  - type: RadioMicrophone
+    broadcastChannel: Handheld #Because can't make this null and I'm dumb to fix
+  - type: RadioSpeaker
+    channels: Handheld # look two lines up
+  - type: Intercom
+    RequiresPower: false
+    SupportedChannels: [ Common, Security] #for test
+  - type: UserInterface
+    interfaces:
+    enum.IntercomUiKey.Key:
+     type: IntercomBoundUserInterface
+
+- type: entity
+  name: improved handheld radio
+  description: An improved version of a handheld radio, can switch between channels.
+  parent: BaseItem
+  id: RadioHandheld
+  components:
+  - type: TelecomExempt
+  - type: RadioMicrophone
+    toggleOnInteract: false
+  - type: RadioSpeaker
+    toggleOnInteract: false
+  - type: Speech
+    speechVerb: Robotic
+  - type: Sprite
+  - type: EncryptionKeyHolder
+    keySlots: 4
+    sprite: Objects/Devices/communication.rsi
+  - type: UserInterface
+    interfaces:
+    enum.IntercomUiKey.Key:
+     type: IntercomBoundUserInterface
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyHandheldImproved1
+      - EncryptionKeyHandheldImproved2
+      - EncryptionKeyHandheldImproved3
+      - EncryptionKeyHandheldImproved4
+    layers:
+    - state: walkietalkie
+    - state: walkietalkie-on
+    state: walkietalkie
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: walkietalkie
+  - type: Tag
+    tags:
+    - Radio

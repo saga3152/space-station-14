@@ -259,3 +259,47 @@
       layers:
         - state: crypt_rusted
         - state: pirate_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyHandheldImproved1
+  name: handheld improved encryption key №1
+  description: An encryption key used by advanced handheld radios.
+  components:
+  - type: EncryptionKey
+    channels:
+    - HandheldImproved1
+    defaultChannel: HandheldImproved1
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyHandheldImproved2
+  name: handheld improved encryption key №2
+  description: An encryption key used by advanced handheld radios.
+  components:
+  - type: EncryptionKey
+    channels:
+    - HandheldImproved2
+    defaultChannel: HandheldImproved2
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyHandheldImproved3
+  name: handheld improved encryption key №3
+  description: An encryption key used by advanced handheld radios.
+  components:
+  - type: EncryptionKey
+    channels:
+    - HandheldImproved3
+    defaultChannel: HandheldImproved3
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyHandheldImproved4
+  name: handheld improved encryption key №4
+  description: An encryption key used by advanced handheld radios.
+  components:
+  - type: EncryptionKey
+    channels:
+    - HandheldImproved4
+    defaultChannel: HandheldImproved4
