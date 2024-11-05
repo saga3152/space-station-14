@@ -16,3 +16,7 @@ chat-radio-freelance = Фриланс
 # not headset but whatever
 chat-radio-handheld = Портативный
 chat-radio-binary = Двоичный
+chat-radio-handheld-improved-1 = Портативный
+chat-radio-handheld-improved-2 = Портативный
+chat-radio-handheld-improved-3 = Портативный
+chat-radio-handheld-improved-4 = Портативный

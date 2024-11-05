@@ -20,7 +20,7 @@
 - type: entity
   name: improved handheld radio
   description: An improved version of a handheld radio, can switch between channels.
-  parent: BaseItem
+  parent: RadioHandheld
   id: RadioHandheldImproved
   components:
   - type: TelecomExempt
@@ -34,9 +34,13 @@
   - type: Speech
     speechVerb: Robotic
   - type: Sprite
-  - type: EncryptionKeyHolder
-    keySlots: 4
     sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: walkietalkie
+    - state: walkietalkie-on
+    state: walkietalkie
+  - type: EncryptionKeyHolder
+    keySlots: 1
   - type: UserInterface
     interfaces:
     enum.IntercomUiKey.Key:
@@ -44,14 +48,8 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyHandheldImproved1
-      - EncryptionKeyHandheldImproved2
-      - EncryptionKeyHandheldImproved3
-      - EncryptionKeyHandheldImproved4
-    layers:
-    - state: walkietalkie
-    - state: walkietalkie-on
-    state: walkietalkie
+      - EncryptionKeyHandheldImproved
+
   - type: Item
     sprite: Objects/Devices/communication.rsi
     heldPrefix: walkietalkie
