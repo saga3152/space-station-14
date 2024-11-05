@@ -18,34 +18,19 @@
     heldPrefix: radio
 
 - type: entity
-  name: advanced radio
-  description: A radio able to access multiple channels
-  parent: RadioHandheld
-  id: RadioAdvanced
-  components:
-  - type: RadioMicrophone
-    broadcastChannel: Handheld #Because can't make this null and I'm dumb to fix
-  - type: RadioSpeaker
-    channels: Handheld # look two lines up
-  - type: Intercom
-    RequiresPower: false
-    SupportedChannels: [ Common, Security] #for test
-  - type: UserInterface
-    interfaces:
-    enum.IntercomUiKey.Key:
-     type: IntercomBoundUserInterface
-
-- type: entity
   name: improved handheld radio
   description: An improved version of a handheld radio, can switch between channels.
   parent: BaseItem
-  id: RadioHandheld
+  id: RadioHandheldImproved
   components:
   - type: TelecomExempt
   - type: RadioMicrophone
     toggleOnInteract: false
+    broadcastChannel: HandheldImproved1
   - type: RadioSpeaker
     toggleOnInteract: false
+    channels:
+    - handheldImproved1
   - type: Speech
     speechVerb: Robotic
   - type: Sprite
