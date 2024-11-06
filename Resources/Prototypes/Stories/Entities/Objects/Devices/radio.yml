@@ -26,13 +26,15 @@
   - type: TelecomExempt
   - type: RadioMicrophone
     toggleOnInteract: false
-    broadcastChannel: HandheldImproved1
   - type: RadioSpeaker
     toggleOnInteract: false
-    channels:
-    - handheldImproved1
   - type: Intercom
     RequiresPower: false
+    SupportedChannels:
+    - handheldImproved1
+    - handheldImproved2
+    - handheldImproved3
+    - handheldImproved4
   - type: Speech
     speechVerb: Robotic
   - type: Sprite
