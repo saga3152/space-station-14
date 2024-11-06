@@ -31,6 +31,8 @@
     toggleOnInteract: false
     channels:
     - handheldImproved1
+  - type: Intercom
+    RequiresPower: false
   - type: Speech
     speechVerb: Robotic
   - type: Sprite
@@ -41,15 +43,21 @@
     state: walkietalkie
   - type: EncryptionKeyHolder
     keySlots: 1
+    keysExtractionMethod: Screwing
   - type: UserInterface
     interfaces:
-    enum.IntercomUiKey.Key:
-     type: IntercomBoundUserInterface
+      enum.IntercomUiKey.Key:
+        type: IntercomBoundUserInterface
+  - type: ActivatableUI
+    key: enum.IntercomUiKey.Key
+    singleUser: true
   - type: ContainerFill
     containers:
       key_slots:
       - EncryptionKeyHandheldImproved
-
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
   - type: Item
     sprite: Objects/Devices/communication.rsi
     heldPrefix: walkietalkie
